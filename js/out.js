@@ -72,19 +72,40 @@
 
 __webpack_require__(1);
 
+// import producers from './producers.js';
+
 document.addEventListener('DOMContentLoaded', function () {
     console.log('DOM');
 
     var cookieBtn = document.getElementById('cookieClick');
     var cookieCount = 0;
-    var autoClick = 0;
+    var coursor = 0;
+    var grandma = 0;
     var farms = 0;
+    var multi = 1;
+    var bakery = 0;
+    var mine = 0;
 
     var update = function update() {
         document.getElementById('text').value = cookieCount;
         document.title = cookieCount + 'Cookies';
-        document.getElementById('amountAutoClickers').innerHTML = 'You own  ' + autoClick + '  Auto Clickers';
-        document.getElementById('costAutoClick').innerHTML = 'Auto Click Cost  ' + (autoClick + 1) * 12 + ' Cookies';
+
+        document.getElementById('amountCoursors').innerHTML = 'You own  ' + coursor + '  Coursors';
+        document.getElementById('costCoursor').innerHTML = 'Coursor Cost  ' + (coursor + 1) * 10 + ' Cookies';
+
+        document.getElementById('amountGrandmas').innerHTML = 'You has  ' + grandma + '  Grandmas';
+        document.getElementById('costGrandma').innerHTML = 'Grandma Cost  ' + (grandma + 1) * 12 + ' Cookies';
+
+        document.getElementById('amountFarms').innerHTML = 'You own  ' + farms + 'Farms';
+        document.getElementById('costFarm').innerHTML = 'Farm Cost ' + (farms + 1) * 15 + ' Cookies';
+
+        document.getElementById('amountBakery').innerHTML = 'You own  ' + bakery + ' Bakeries';
+        document.getElementById('costBakery').innerHTML = 'Bakery Cost ' + (bakery + 1) * 30 + ' Cookies';
+
+        document.getElementById('amountMines').innerHTML = 'You own  ' + mine + ' Mines';
+        document.getElementById('costMine').innerHTML = 'Mine Cost ' + (mine + 1) * 100 + ' Cookies';
+
+        document.getElementById('cookiesPerSec').innerHTML = 'You producing ' + (coursor * 0.1 + grandma + farms * 8 + bakery * 47 + mine * 260) * multi + ' Cookies per/s';
     };
 
     cookieBtn.addEventListener('click', function (add) {
@@ -97,32 +118,70 @@ document.addEventListener('DOMContentLoaded', function () {
 
     saveBtn.addEventListener('click', function (save) {
         localStorage.setItem('cookieCount', cookieCount);
-        localStorage.setItem('autoClickers', autoClick);
+        localStorage.setItem('coursors', coursor);
+        localStorage.setItem('grandmas', grandma);
+        localStorage.setItem('farms', farms);
+        localStorage.setItem('bakeries', bakery);
+        localStorage.setItem('mines', mine);
     });
 
     loadBtn.addEventListener('click', function (load) {
         cookieCount = localStorage.getItem('cookieCount');
         cookieCount = parseInt(cookieCount);
-        autoClick = localStorage.getItem('autoClickers');
-        autoClick = parseInt(autoClick);
+
+        coursor = localStorage.getItem('coursors');
+        coursor = parseInt(coursor);
+
+        grandma = localStorage.getItem('grandmas');
+        grandma = parseInt(grandma);
+
+        farms = localStorage.getItem('farms');
+        farms = parseInt(farms);
+
+        bakery = localStorage.getItem('bakeries');
+        bakery = parseInt(bakery);
+
+        mine = localStorage.getItem('mines');
+        mine = parseInt(mine);
+
         update();
     });
 
     setInterval(function (timer) {
-        cookieCount = cookieCount + autoClick;
+        cookieCount = cookieCount + coursor;
+    }, 10000);
+
+    setInterval(function (produce) {
+        cookieCount = cookieCount + grandma;
+        cookieCount += farms * 8;
+        cookieCount += bakery * 47;
+        cookieCount += mine * 260;
         update();
     }, 1000);
 
-    var buyAutoClick = function buyAutoClick() {
-        if (cookieCount >= (autoClick + 1) * 12) {
-            cookieCount -= (autoClick + 1) * 12;
-            autoClick += 1;
+    //Coursor
+    var buyCoursor = function buyCoursor() {
+        if (cookieCount >= (coursor + 1) * 10) {
+            cookieCount -= (coursor + 1) * 10;
+            coursor += 1;
             update();
         }
     };
 
-    var autoClickBtn = document.getElementById('autoClicker');
-    autoClickBtn.addEventListener('click', buyAutoClick);
+    var coursorBtn = document.getElementById('coursor');
+    coursorBtn.addEventListener('click', buyCoursor);
+
+    //Grandma
+    var buyGrandma = function buyGrandma() {
+        if (cookieCount >= (grandma + 1) * 12) {
+            cookieCount -= (grandma + 1) * 12;
+            grandma += 1;
+            update();
+        }
+    };
+
+    var grandmaBtn = document.getElementById('grandma');
+    grandmaBtn.addEventListener('click', buyGrandma);
 
     // Farm
 
@@ -136,6 +195,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var farmBtn = document.getElementById('farm');
     farmBtn.addEventListener('click', buyFarm);
+
+    //Bakery
+
+    var buyBakery = function buyBakery() {
+        if (cookieCount > (bakery + 1) * 30) {
+            cookieCount -= (bakery + 1) * 30;
+            bakery += 1;
+            update();
+        }
+    };
+
+    var bakeryBtn = document.getElementById('bakery');
+    bakeryBtn.addEventListener('click', buyBakery);
+
+    //Mine
+
+    var buyMine = function buyMine() {
+        if (cookieCount > (mine + 1) * 100) {
+            cookieCount -= (mine + 1) * 100;
+            mine += 1;
+            update();
+        }
+    };
+
+    var mineBtn = document.getElementById('mine');
+    mineBtn.addEventListener('click', buyMine);
 });
 
 /***/ }),
@@ -178,7 +263,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "body {\n  background-color: pink; }\n  body #cookieClick img {\n    display: block;\n    width: 300px;\n    height: 300px; }\n  body #autoClicker img {\n    width: 30px;\n    height: 30px; }\n  body #farm img {\n    width: 30px;\n    height: 30px; }\n", ""]);
+exports.push([module.i, "body {\n  background-color: pink; }\n  body #cookieClick img {\n    display: block;\n    width: 300px;\n    height: 300px; }\n  body #coursor img {\n    width: 30px;\n    height: 30px; }\n  body #grandma img {\n    width: 30px;\n    height: 30px; }\n  body #farm img {\n    width: 30px;\n    height: 30px; }\n  body #bakery img {\n    width: 30px;\n    height: 30px; }\n  body #mine img {\n    width: 30px;\n    height: 30px; }\n", ""]);
 
 // exports
 
