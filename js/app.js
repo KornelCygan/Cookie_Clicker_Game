@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('text').value = cookieCount;
         document.title = cookieCount + 'Cookies';
 
-        document.getElementById('amountCoursors').innerHTML = 'You own  ' + coursor + '  Coursors';
-        document.getElementById('costCoursor').innerHTML = 'Coursor Cost  ' + ( (coursor + 1) * 10 ) + ' Cookies';
+        document.getElementById('amountCoursors').innerHTML =  coursor ;
+        document.getElementById('costCoursor').innerHTML = 'Cost  ' + ( (coursor + 1) * 10 ) + ' Cookies';
 
         document.getElementById('amountGrandmas').innerHTML = 'You has  ' + grandma + '  Grandmas';
         document.getElementById('costGrandma').innerHTML = 'Grandma Cost  ' + ( (grandma + 1) * 12 ) + ' Cookies';

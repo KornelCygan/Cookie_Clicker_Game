@@ -90,8 +90,8 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('text').value = cookieCount;
         document.title = cookieCount + 'Cookies';
 
-        document.getElementById('amountCoursors').innerHTML = 'You own  ' + coursor + '  Coursors';
-        document.getElementById('costCoursor').innerHTML = 'Coursor Cost  ' + (coursor + 1) * 10 + ' Cookies';
+        document.getElementById('amountCoursors').innerHTML = coursor;
+        document.getElementById('costCoursor').innerHTML = 'Cost  ' + (coursor + 1) * 10 + ' Cookies';
 
         document.getElementById('amountGrandmas').innerHTML = 'You has  ' + grandma + '  Grandmas';
         document.getElementById('costGrandma').innerHTML = 'Grandma Cost  ' + (grandma + 1) * 12 + ' Cookies';
@@ -238,7 +238,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(4)(content, options);
+var update = __webpack_require__(5)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -263,7 +263,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "body {\n  background-color: pink; }\n  body #cookieClick img {\n    display: block;\n    width: 300px;\n    height: 300px; }\n  body #coursor img {\n    width: 30px;\n    height: 30px; }\n  body #grandma img {\n    width: 30px;\n    height: 30px; }\n  body #farm img {\n    width: 30px;\n    height: 30px; }\n  body #bakery img {\n    width: 30px;\n    height: 30px; }\n  body #mine img {\n    width: 30px;\n    height: 30px; }\n", ""]);
+exports.push([module.i, "body {\n  background-color: pink;\n  box-sizing: border-box;\n  font-family: 'Roboto Slab', serif; }\n  body div.game {\n    width: 100vw;\n    height: 100vh; }\n    body div.game #cookieClick img {\n      display: block;\n      width: 300px;\n      height: 300px; }\n    body div.game button.proeducerBtn {\n      border: 1px solid green;\n      height: 100px;\n      justify-items: center;\n      justify-content: center;\n      align-items: center; }\n      body div.game button.proeducerBtn .producerImg img {\n        height: 90px;\n        width: 80px; }\n      body div.game button.proeducerBtn .producerTitle {\n        display: flex;\n        flex-direction: column;\n        justify-content: space-between; }\n      body div.game button.proeducerBtn .amountProducers {\n        font-size: 3em;\n        display: flex;\n        justify-content: center;\n        align-items: center; }\n    body div.game #grandma img {\n      width: 30px;\n      height: 30px; }\n    body div.game #farm img {\n      width: 30px;\n      height: 30px; }\n    body div.game #bakery img {\n      width: 30px;\n      height: 30px; }\n    body div.game #mine img {\n      width: 30px;\n      height: 30px; }\n", ""]);
 
 // exports
 
@@ -351,7 +351,8 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 4 */
+/* 4 */,
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -407,7 +408,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(5);
+var	fixUrls = __webpack_require__(6);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -723,7 +724,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports) {
 
 

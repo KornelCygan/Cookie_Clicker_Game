@@ -5,44 +5,75 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&amp;subset=latin-ext" rel="stylesheet">
     <title>0 Cookies</title>
 </head>
 <body>
-    <section>
-        <p id="cookiesPerSec">You producing 0 cookies per/s</p>
+<div class="game container-fluid">
+    <div class="row">
+        <section id="bigCookie" class="col">
 
-        <a href="#" id="cookieClick"><img src="./img/cookie.png" alt="cookie button"></a>
-        <input type="text" id="text" disabled value="0">
 
-        <button id="save">Save</button>
-        <button id="load">Load</button>
 
-        <p>Buy 1 Coursor</p>
-        <button id="coursor"><img src="./img/coursor.png" alt="coursor"></button>
-        <p id="costCoursor"> Cookies</p>
-        <p id="amountCoursors">You has 0 Coursors </p>
+            <a href="#" id="cookieClick"><img src="./img/cookie.png" alt="cookie button"></a>
+            <input type="text" id="text" disabled value="0">
 
-        <p>Buy 1 Grandma</p>
-        <button id="grandma"><img src="./img/grandma.png" alt="grandma"></button>
-        <p id="costGrandma"> Cookies</p>
-        <p id="amountGrandmas">You has 0 Grandmas </p>
+            <button id="save">Save</button>
+            <button id="load">Load</button>
 
-        <p>Buy 1 Farm</p>
-        <button id="farm"><img src="./img/farm.png" alt="farm"></button>
-        <p id="costFarm"> Cookies</p>
-        <p id="amountFarms">You own 0 Farms</p>
+        </section>
 
-        <p>Buy 1 Bakery</p>
-        <button id="bakery"><img src="./img/bakery.png" alt="bakery"></button>
-        <p id="costBakery"> Cookies</p>
-        <p id="amountBakery">You own 0 Bakeries</p>
 
-        <p>Buy 1 Mine</p>
-        <button id="mine"><img src="./img/mine.png" alt="mine"></button>
-        <p id="costMine"> Cookies</p>
-        <p id="amountMines">You own 0 Mines</p>
+        <section id="center" class="col">
 
-    </section>
+            <p id="cookiesPerSec">You producing 0 cookies per/s</p>
+        </section>
+
+
+        <section id="produers" class="col">
+
+            <button class="container proeducerBtn" >
+                <div class="row justify-content-between">
+                    <div class="col-3">
+                        <div class="producerImg">
+                            <img src="./img/coursor.png" alt="coursor">
+                        </div>
+                    </div>
+                    <div class="col-6 producerTitle">
+                        <h3>Coursor</h3>
+                        <p id="costCoursor"> Cookies</p>
+                    </div>
+                    <div class="col-3 amountProducers">
+                        <p id="amountCoursors">Own 0 </p>
+                    </div>
+                </div>
+            </button>
+
+
+            <p>Buy 1 Grandma</p>
+            <button id="grandma"><img src="./img/grandma.png" alt="grandma"></button>
+            <p id="costGrandma"> Cookies</p>
+            <p id="amountGrandmas">You has 0 Grandmas </p>
+
+            <p>Buy 1 Farm</p>
+            <button id="farm"><img src="./img/farm.png" alt="farm"></button>
+            <p id="costFarm"> Cookies</p>
+            <p id="amountFarms">You own 0 Farms</p>
+
+            <p>Buy 1 Bakery</p>
+            <button id="bakery"><img src="./img/bakery.png" alt="bakery"></button>
+            <p id="costBakery"> Cookies</p>
+            <p id="amountBakery">You own 0 Bakeries</p>
+
+            <p>Buy 1 Mine</p>
+            <button id="mine"><img src="./img/mine.png" alt="mine"></button>
+            <p id="costMine"> Cookies</p>
+            <p id="amountMines">You own 0 Mines</p>
+
+        </section>
+    </div>
+</div>
 
     <script src="./js/out.js" type="text/javascript"></script>
 </body>

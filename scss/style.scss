@@ -1,34 +1,63 @@
+@charset "UTF-8";
 body {
   background-color: pink;
+  box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
 
-  #cookieClick img {
-    display: block;
-    width: 300px;
-    height: 300px;
+  div.game{
+    width: 100vw;
+    height:100vh;
+
+    #cookieClick img {
+      display: block;
+      width: 300px;
+      height: 300px;
+    }
+
+    button.proeducerBtn {
+      border: 1px solid green;
+      height: 100px;
+      justify-items: center;
+      justify-content: center;
+      align-items: center;
+
+      .producerImg img {
+        height: 90px;
+        width: 80px;
+      }
+
+      .producerTitle{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .amountProducers {
+        font-size: 3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    #grandma img{
+      width: 30px;
+      height: 30px;
+    }
+
+    #farm img {
+      width: 30px;
+      height: 30px;
+    }
+
+    #bakery img {
+      width: 30px;
+      height: 30px;
+    }
+
+    #mine img {
+      width: 30px;
+      height: 30px;
   }
-
-  #coursor img {
-    width: 30px;
-    height: 30px;
-  }
-
-  #grandma img{
-    width: 30px;
-    height: 30px;
-  }
-
-  #farm img {
-    width: 30px;
-    height: 30px;
-  }
-
-  #bakery img {
-    width: 30px;
-    height: 30px;
-  }
-
-  #mine img {
-    width: 30px;
-    height: 30px;
   }
 }
