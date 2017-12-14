@@ -12,26 +12,35 @@
 <body>
 <div class="game container-fluid">
     <div class="row">
-        <section id="bigCookie" class="col">
+        <section class="col">
 
-
-
-            <a href="#" id="cookieClick"><img src="./img/cookie.png" alt="cookie button"></a>
-            <input type="text" id="text" disabled value="0">
-
-            <button id="save">Save</button>
-            <button id="load">Load</button>
+            <div class="container bigCookie">
+                <div class="row">
+                    <a href="#" id="cookieClick"><img src="./img/cookie.png" alt="cookie button"></a>
+                </div>
+                <div class="row">
+                    <button id="save">Save</button>
+                    <button id="load">Load</button>
+                </div>
+            </div>
 
         </section>
 
 
-        <section id="center" class="col">
-
-            <p id="cookiesPerSec">You producing 0 cookies per/s</p>
+        <section class="col center">
+            <div class="row">
+                <h5>Your Cookies</h5>
+            </div>
+            <div class="row cookiesOwned">
+                <p id="text"></p>
+            </div>
+            <div class="row cookiesPerS">
+                <h4 id="cookiesPerSec">You producing 0 cookies per/s</h4>
+            </div>
         </section>
 
 
-        <section class="col producers justify-content-between">
+        <section class="col producers">
 
             <div class="container proeducerBtn" id="coursor" >
                 <div class="row justify-content-between btn-11">

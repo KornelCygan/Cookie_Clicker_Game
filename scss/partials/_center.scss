@@ -1,0 +1,12 @@
+
+
+.center{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  p#text{
+    font-size: 10em;
+  }
+}

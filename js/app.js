@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let mine = 0;
 
     let update = () => {
-        document.getElementById('text').value = cookieCount;
+        document.getElementById('text').innerText = cookieCount;
         document.title = cookieCount + 'Cookies';
 
         document.getElementById('amountCoursors').innerHTML =  coursor ;

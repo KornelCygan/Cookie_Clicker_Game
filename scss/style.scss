@@ -1,4 +1,6 @@
 @import 'partials/producers';
+@import 'partials/cookie';
+@import 'partials/center';
 
 body {
   background-color: #fff;
@@ -8,11 +10,5 @@ body {
   div.game{
     width: 100vw;
     height:100vh;
-
-    #cookieClick img {
-      display: block;
-      width: 300px;
-      height: 300px;
-    }
   }
 }
