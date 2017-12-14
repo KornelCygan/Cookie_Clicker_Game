@@ -20,17 +20,17 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('amountCoursors').innerHTML =  coursor ;
         document.getElementById('costCoursor').innerHTML = 'Cost  ' + ( (coursor + 1) * 10 ) + ' Cookies';
 
-        document.getElementById('amountGrandmas').innerHTML = 'You has  ' + grandma + '  Grandmas';
-        document.getElementById('costGrandma').innerHTML = 'Grandma Cost  ' + ( (grandma + 1) * 12 ) + ' Cookies';
+        document.getElementById('amountGrandmas').innerHTML = grandma;
+        document.getElementById('costGrandma').innerHTML = 'Cost  ' + ( (grandma + 1) * 12 ) + ' Cookies';
 
-        document.getElementById('amountFarms').innerHTML = 'You own  ' + farms + 'Farms';
-        document.getElementById('costFarm').innerHTML = 'Farm Cost ' + ( (farms + 1) * 15 ) + ' Cookies'
+        document.getElementById('amountFarms').innerHTML = farms ;
+        document.getElementById('costFarm').innerHTML = 'Cost ' + ( (farms + 1) * 15 ) + ' Cookies'
 
-        document.getElementById('amountBakery').innerHTML = 'You own  ' + bakery + ' Bakeries';
-        document.getElementById('costBakery').innerHTML = 'Bakery Cost ' + ( (bakery + 1) * 30 ) + ' Cookies'
+        document.getElementById('amountBakery').innerHTML =  bakery ;
+        document.getElementById('costBakery').innerHTML = 'Cost ' + ( (bakery + 1) * 30 ) + ' Cookies'
 
-        document.getElementById('amountMines').innerHTML = 'You own  ' + mine + ' Mines';
-        document.getElementById('costMine').innerHTML = 'Mine Cost ' + ( (mine + 1) * 100 ) + ' Cookies'
+        document.getElementById('amountMines').innerHTML =  mine;
+        document.getElementById('costMine').innerHTML = 'Cost ' + ( (mine + 1) * 100 ) + ' Cookies'
 
         document.getElementById('cookiesPerSec').innerHTML =
             'You producing ' + ( (  (coursor * 0.1 ) + ( grandma ) + ( farms * 8 ) + ( bakery * 47 ) + ( mine * 260 ) ) * multi  )  + ' Cookies per/s'

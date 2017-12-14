@@ -1,6 +1,7 @@
-@charset "UTF-8";
+@import 'partials/producers';
+
 body {
-  background-color: pink;
+  background-color: #fff;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
 
@@ -13,51 +14,5 @@ body {
       width: 300px;
       height: 300px;
     }
-
-    button.proeducerBtn {
-      border: 1px solid green;
-      height: 100px;
-      justify-items: center;
-      justify-content: center;
-      align-items: center;
-
-      .producerImg img {
-        height: 90px;
-        width: 80px;
-      }
-
-      .producerTitle{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-
-      .amountProducers {
-        font-size: 3em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-
-    #grandma img{
-      width: 30px;
-      height: 30px;
-    }
-
-    #farm img {
-      width: 30px;
-      height: 30px;
-    }
-
-    #bakery img {
-      width: 30px;
-      height: 30px;
-    }
-
-    #mine img {
-      width: 30px;
-      height: 30px;
-  }
   }
 }
