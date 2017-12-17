@@ -87,23 +87,23 @@ document.addEventListener('DOMContentLoaded', function () {
     var mine = 0;
 
     var update = function update() {
-        document.getElementById('text').value = cookieCount;
+        document.getElementById('text').innerText = cookieCount;
         document.title = cookieCount + 'Cookies';
 
         document.getElementById('amountCoursors').innerHTML = coursor;
         document.getElementById('costCoursor').innerHTML = 'Cost  ' + (coursor + 1) * 10 + ' Cookies';
 
-        document.getElementById('amountGrandmas').innerHTML = 'You has  ' + grandma + '  Grandmas';
-        document.getElementById('costGrandma').innerHTML = 'Grandma Cost  ' + (grandma + 1) * 12 + ' Cookies';
+        document.getElementById('amountGrandmas').innerHTML = grandma;
+        document.getElementById('costGrandma').innerHTML = 'Cost  ' + (grandma + 1) * 12 + ' Cookies';
 
-        document.getElementById('amountFarms').innerHTML = 'You own  ' + farms + 'Farms';
-        document.getElementById('costFarm').innerHTML = 'Farm Cost ' + (farms + 1) * 15 + ' Cookies';
+        document.getElementById('amountFarms').innerHTML = farms;
+        document.getElementById('costFarm').innerHTML = 'Cost ' + (farms + 1) * 15 + ' Cookies';
 
-        document.getElementById('amountBakery').innerHTML = 'You own  ' + bakery + ' Bakeries';
-        document.getElementById('costBakery').innerHTML = 'Bakery Cost ' + (bakery + 1) * 30 + ' Cookies';
+        document.getElementById('amountBakery').innerHTML = bakery;
+        document.getElementById('costBakery').innerHTML = 'Cost ' + (bakery + 1) * 30 + ' Cookies';
 
-        document.getElementById('amountMines').innerHTML = 'You own  ' + mine + ' Mines';
-        document.getElementById('costMine').innerHTML = 'Mine Cost ' + (mine + 1) * 100 + ' Cookies';
+        document.getElementById('amountMines').innerHTML = mine;
+        document.getElementById('costMine').innerHTML = 'Cost ' + (mine + 1) * 100 + ' Cookies';
 
         document.getElementById('cookiesPerSec').innerHTML = 'You producing ' + (coursor * 0.1 + grandma + farms * 8 + bakery * 47 + mine * 260) * multi + ' Cookies per/s';
     };
@@ -238,7 +238,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(5)(content, options);
+var update = __webpack_require__(4)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -263,7 +263,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "body {\n  background-color: pink;\n  box-sizing: border-box;\n  font-family: 'Roboto Slab', serif; }\n  body div.game {\n    width: 100vw;\n    height: 100vh; }\n    body div.game #cookieClick img {\n      display: block;\n      width: 300px;\n      height: 300px; }\n    body div.game button.proeducerBtn {\n      border: 1px solid green;\n      height: 100px;\n      justify-items: center;\n      justify-content: center;\n      align-items: center; }\n      body div.game button.proeducerBtn .producerImg img {\n        height: 90px;\n        width: 80px; }\n      body div.game button.proeducerBtn .producerTitle {\n        display: flex;\n        flex-direction: column;\n        justify-content: space-between; }\n      body div.game button.proeducerBtn .amountProducers {\n        font-size: 3em;\n        display: flex;\n        justify-content: center;\n        align-items: center; }\n    body div.game #grandma img {\n      width: 30px;\n      height: 30px; }\n    body div.game #farm img {\n      width: 30px;\n      height: 30px; }\n    body div.game #bakery img {\n      width: 30px;\n      height: 30px; }\n    body div.game #mine img {\n      width: 30px;\n      height: 30px; }\n", ""]);
+exports.push([module.i, ".producers {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center; }\n  .producers div.proeducerBtn {\n    height: 100px;\n    justify-items: center;\n    justify-content: center;\n    align-items: center;\n    margin: 5px;\n    position: relative; }\n    .producers div.proeducerBtn:before {\n      content: \"\";\n      position: absolute;\n      z-index: -1;\n      top: 0;\n      left: 0;\n      right: 0;\n      bottom: 0;\n      background: rgba(0, 153, 51, 0.5);\n      transform: scaleX(0);\n      transform-origin: 50% 0;\n      transition-property: transform;\n      transition-duration: 200ms;\n      transition-timing-function: ease-out; }\n    .producers div.proeducerBtn:hover, .producers div.proeducerBtn:focus, .producers div.proeducerBtn:active {\n      color: white;\n      coursor: pointer; }\n      .producers div.proeducerBtn:hover:before, .producers div.proeducerBtn:focus:before, .producers div.proeducerBtn:active:before {\n        transform: scaleX(1);\n        transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66); }\n    .producers div.proeducerBtn .producerImg img {\n      height: 90px;\n      width: 80px; }\n    .producers div.proeducerBtn .producerTitle {\n      display: flex;\n      flex-direction: column;\n      justify-content: space-between; }\n    .producers div.proeducerBtn .amountProducers {\n      font-size: 3em;\n      display: flex;\n      justify-content: center;\n      align-items: center; }\n\n.bigCookie {\n  height: 100vh;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center; }\n  .bigCookie #cookieClick img {\n    width: 450px;\n    height: 450px; }\n  .bigCookie #cookieClick:active {\n    transform: scale(0.95); }\n\n.center {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  align-items: center; }\n  .center p#text {\n    font-size: 10em; }\n\nbody {\n  background-color: #fff;\n  box-sizing: border-box;\n  font-family: 'Roboto Slab', serif; }\n  body div.game {\n    width: 100vw;\n    height: 100vh; }\n", ""]);
 
 // exports
 
@@ -351,8 +351,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 4 */,
-/* 5 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -408,7 +407,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(6);
+var	fixUrls = __webpack_require__(5);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -724,7 +723,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports) {
 
 
