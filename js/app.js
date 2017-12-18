@@ -42,10 +42,71 @@ document.addEventListener('DOMContentLoaded', function() {
         update();
     })
 
+
+//     //IndexedDB way - learning in progress
+//
+//
+// // This works on all devices/browsers, and uses IndexedDBShim as a final fallback
+//     var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
+//
+// // Open (or create) the database
+//     var open = indexedDB.open("MyDatabase", 1);
+//
+// // Create the schema
+//     open.onupgradeneeded = function() {
+//         var db = open.result;
+//         var store = db.createObjectStore("MyObjectStore", {keyPath: "gameState"});
+//         // var index = store.createIndex("NameIndex", ["name.last", "name.first"]);
+//     };
+//
+//     open.onsuccess = function() {
+//         // Start a new transaction
+//         var db = open.result;
+//         var tx = db.transaction("MyObjectStore", "readwrite");
+//         var store = tx.objectStore("MyObjectStore");
+//         // var index = store.index("gameStateIndex");
+//
+//         // Add some data
+//         // store.put({id: 12345, name: {first: "John", last: "Doe"}, age: 42});
+//         // store.put({id: 67890, name: {first: "Bob", last: "Smith"}, age: 35});
+//
+//         store.put({
+//             // gameStateIndex: 1,
+//             cookieCount: cookieCount,
+//             coursor: coursor,
+//             grandmas: grandma,
+//             farms: farms,
+//             bakeries: bakery,
+//             mines: mine
+//         })
+//
+//         // Query the data
+//         // var getJohn = store.get(1);
+//         var getCookie = index.get(["cookieCount"]);
+//
+//         getJohn.onsuccess = function() {
+//             console.log(getJohn.result);  // => "John"
+//         };
+//
+//         getCookie.onsuccess = function() {
+//             console.log(getCookie.result.cookieCount);   // => "Bob"
+//         };
+//
+//         // Close the db when the transaction is done
+//         tx.oncomplete = function() {
+//             db.close();
+//         };
+//     }
+
+
+
+
+// Local Storage way - works
     let saveBtn = document.getElementById('save');
     let loadBtn = document.getElementById('load');
 
     saveBtn.addEventListener('click', save => {
+
         localStorage.setItem('cookieCount', cookieCount);
         localStorage.setItem('coursors', coursor);
         localStorage.setItem('grandmas', grandma);
@@ -55,6 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     loadBtn.addEventListener('click', load => {
+
         cookieCount = localStorage.getItem('cookieCount');
         cookieCount = parseInt(cookieCount);
 
