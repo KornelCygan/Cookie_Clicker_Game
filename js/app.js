@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //     //IndexedDB way - learning in progress
-//
+// //
 //
 // // This works on all devices/browsers, and uses IndexedDBShim as a final fallback
 //     var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
@@ -78,18 +78,18 @@ document.addEventListener('DOMContentLoaded', function() {
 //             farms: farms,
 //             bakeries: bakery,
 //             mines: mine
-//         })
+//         });
 //
 //         // Query the data
 //         // var getJohn = store.get(1);
-//         var getCookie = index.get(["cookieCount"]);
+//         var getCookie = store.get(["cookieCount"]);
 //
-//         getJohn.onsuccess = function() {
-//             console.log(getJohn.result);  // => "John"
-//         };
+//         // getJohn.onsuccess = function() {
+//         //     console.log(getCookie.result);
+//         // };
 //
 //         getCookie.onsuccess = function() {
-//             console.log(getCookie.result.cookieCount);   // => "Bob"
+//             console.log(getCookie.result.cookieCount);
 //         };
 //
 //         // Close the db when the transaction is done
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// Local Storage way - works
+Local Storage way - works
     let saveBtn = document.getElementById('save');
     let loadBtn = document.getElementById('load');
 
